@@ -1,12 +1,18 @@
 footer {
-    background-color: blue;
+    // background-color: blue;
+
+    ul {
+        li {
+            display: block;
+        }
+    }
 
     #info {
-        background-color: purple;
+        // background-color: purple;
     }
 
     .footer-menu {
-        background-color: yellow;
+        // background-color: yellow;
     }
 
 }

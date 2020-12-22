@@ -501,16 +501,15 @@ a {
 }
 
 header {
-  background-color: red;
   font-size: 14px;
 }
 
 header #logo {
-  background-color: orange;
+  text-align: center;
 }
 
 header #main-menu {
-  background-color: orange;
+  text-align: center;
 }
 
 main {
@@ -518,15 +517,7 @@ main {
   background-color: green;
 }
 
-footer {
-  background-color: blue;
-}
-
-footer #info {
-  background-color: purple;
-}
-
-footer .footer-menu {
-  background-color: yellow;
+footer ul li {
+  display: block;
 }
 
