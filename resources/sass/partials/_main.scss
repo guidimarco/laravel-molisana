@@ -1,5 +1,6 @@
 main {
-    height: 50px;
-    background-color: green;
+    min-height: 100vh;
+    background-image: url("/images/sfondo-main.jpg");
+    padding: ($spacing * 2) 0;
 
 }
