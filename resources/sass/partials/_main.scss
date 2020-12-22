@@ -3,4 +3,29 @@ main {
     background-image: url("/images/sfondo-main.jpg");
     padding: ($spacing * 2) 0;
 
+    // html --> Prodotti
+    .card-container {
+        .card {
+            position: relative;
+
+            img {
+                max-width: 100%;
+            }
+
+            .card-overlay {
+                opacity: 0;
+                @include posAbs(0, 0, 0, 0);
+                @include flex(row, center, center);
+                transition: opacity 2s;
+            }
+
+            &:hover {
+                .card-overlay {
+                    background-color: #fff;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
 }
