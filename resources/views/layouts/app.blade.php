@@ -5,7 +5,7 @@
         <title>La molisana | Home</title>
 
         <!-- css -->
-        <link rel="stylesheet" href="{{ asset("css/app.css") }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
         @include('partials.header')
@@ -17,6 +17,6 @@
         @include('partials.footer')
 
         <!-- js -->
-        <script src="{{ asset("js/app.js") }}" charset="utf-8"></script>
+        <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
     </body>
 </html>

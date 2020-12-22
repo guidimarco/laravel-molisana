@@ -3,7 +3,7 @@
         <div class="row">
             <!-- TOP/LEFT: brand info & logo -->
             <div id="info" class="col-xs-12 col-lg-4">
-                <img src="{{ asset("images/logo-la-molisana.png") }}" alt="logo brand la molisana">
+                <img src="{{ asset('images/logo-la-molisana.png') }}" alt="logo brand la molisana">
                 <ul>
                     <li>Ragione sociale: La Molisana S.P.A.</li>
                     <li>Sede Legale: Contrada Colle delle Alpi, 100/A</li>
