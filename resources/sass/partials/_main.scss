@@ -7,6 +7,7 @@ main {
     .card-container {
         .card {
             position: relative;
+            margin: $gutter;
 
             img {
                 max-width: 100%;
