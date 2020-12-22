@@ -7,14 +7,10 @@ $spacing: 12px;
 $gutter: 15px; // see _12col.scss
 
 // color
-$brandPr: #101010;
-$textPr: #ffffff;
-$textPrAlt: #989898;
+$brandPr: #fff;
+$textPr: #989898;
 
 // html
-$headerHeight: 50px;
-$btmFooterHeight: 60px; // min height footer btm
-$mainNavHeight: 55px; // nav-bar after jumbotron
 
 // media-query-list: "media-query-name" + m-q-min-width + container-max-width
 $xs-min: 0px; $sm-min: 576px; $md-min: 768px; $lg-min: 992px; $xl-min: 1200px;

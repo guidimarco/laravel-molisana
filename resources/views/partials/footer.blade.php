@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <!-- TOP/LEFT: brand info & logo -->
-            <div id="info" class="col-xs-12 col-md-4">
+            <div id="info" class="col-xs-12 col-lg-4">
                 <img src="{{ asset("images/logo-la-molisana.png") }}" alt="logo brand la molisana">
                 <ul>
                     <li>Ragione sociale: La Molisana S.P.A.</li>
@@ -20,10 +20,10 @@
             </div>
 
             <!-- BTM/RIGHT: footer menu -->
-            <nav class="footer-menu col-xs-12 col-md-4">
+            <nav class="footer-menu col-xs-12 col-lg-4">
                 <ul>
                     <li>
-                        Pastificio
+                        <span class="footer-menu-name">Pastificio</span>
                         <ul>
                             <li>
                                 <a href="#">Il pastificio</a>
@@ -52,7 +52,7 @@
                         </ul>
                     </li>
                     <li>
-                        Prodotti
+                        <span class="footer-menu-name">Prodotti</span>
                         <ul>
                             <li>
                                 <a href="#">Le Classiche</a>
@@ -81,10 +81,10 @@
             </nav>
 
             <!-- BTM/RIGHT: footer menu -->
-            <nav class="footer-menu col-xs-12 col-md-4">
+            <nav class="footer-menu col-xs-12 col-lg-4">
                 <ul>
                     <li>
-                        Collezioni da chef
+                        <span class="footer-menu-name">Collezioni da chef</span>
                         <ul>
                             <li>
                                 <a href="#">Collezione da Chef</a>

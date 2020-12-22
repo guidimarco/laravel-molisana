@@ -501,15 +501,26 @@ a {
 }
 
 header {
-  font-size: 14px;
+  font-size: 16.8px;
+  font-weight: bold;
 }
 
 header #logo {
   text-align: center;
+  padding: 24px 0;
+}
+
+header #logo img {
+  max-height: 100px;
 }
 
 header #main-menu {
   text-align: center;
+  padding: 12px 0;
+}
+
+header #main-menu a {
+  padding: 12px;
 }
 
 main {
@@ -517,7 +528,26 @@ main {
   background-color: green;
 }
 
+footer {
+  font-size: 12.6px;
+  padding: 24px 0;
+  color: #989898;
+}
+
 footer ul li {
   display: block;
+  margin-bottom: 6px;
+}
+
+footer .footer-menu ul li .footer-menu-name {
+  display: inline-block;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 24px 0;
+}
+
+footer .footer-menu ul li li {
+  margin-bottom: 12px;
 }
 

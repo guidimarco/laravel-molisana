@@ -1,9 +1,12 @@
 footer {
-    // background-color: blue;
+    font-size: $fontSize * 0.9;
+    padding: (2 * $spacing) 0;
+    color: $textPr;
 
     ul {
         li {
             display: block;
+            margin-bottom: $spacing / 2;
         }
     }
 
@@ -13,6 +16,21 @@ footer {
 
     .footer-menu {
         // background-color: yellow;
+
+        ul {
+            li {
+                .footer-menu-name {
+                    display: inline-block;
+                    font-size: $fontSize * 1.5;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin: ($spacing * 2) 0;
+                }
+                li {
+                    margin-bottom: $spacing;
+                }
+            }
+        }
     }
 
 }

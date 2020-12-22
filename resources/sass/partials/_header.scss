@@ -1,15 +1,25 @@
 header {
-    // color: $textPr;
-    font-size: $fontSize;
+    font-size: $fontSize * 1.2;
+    font-weight: bold;
 
     // TOP: brand logo
     #logo {
         text-align: center;
+        padding: (2 * $spacing) 0;
+
+        img {
+            max-height: 100px;
+        }
     }
 
     // BTM: nav menu
     #main-menu {
         text-align: center;
+        padding: ($spacing) 0;
+
+        a {
+            padding: $spacing;
+        }
     }
 
 } // fine header
