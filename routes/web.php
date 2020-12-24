@@ -39,6 +39,10 @@ Route::get('/prodotti', function () {
     return view('prodotti', $data);
 }) -> name("prodotti");
 
+Route::get('prodotti/{id}', function($id) {
+    return $id;
+});
+
 Route::get('/news', function () {
     return view('news');
 }) -> name("news");
