@@ -485,6 +485,12 @@ h1, h2 {
   color: #001942;
 }
 
+h2 {
+  width: 100%;
+  text-transform: uppercase;
+  margin: 24px 0 12px 10px;
+}
+
 ul {
   list-style-type: none;
 }

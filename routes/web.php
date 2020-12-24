@@ -18,8 +18,20 @@ Route::get('/', function () {
 }) -> name("home");
 
 Route::get('/prodotti', function () {
+    $all_pasta = config("pasta");
+    $copy_all_pasta = collect($all_pasta);
+
+    // define single type
+    $pasta_lunga = $copy_all_pasta -> where("tipo", "lunga");
+    $pasta_corta = $copy_all_pasta -> where("tipo", "corta");
+    $pasta_cortissima = $copy_all_pasta -> where("tipo", "cortissima");
+
     $data = [
-        'formati' => config("pasta"), // all type of pasta
+        'formati' => [
+            'lunga' => $pasta_lunga,
+            'corta' => $pasta_corta,
+            'cortissima' => $pasta_cortissima
+        ], // all type of pasta
     ];
 
     // dd($data);

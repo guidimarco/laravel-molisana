@@ -19,6 +19,12 @@ h1, h2 {
     color: $titlePr;
 }
 
+h2 {
+    width: 100%;
+    text-transform: uppercase;
+    margin: (2 * $spacing) 0 $spacing (2 * $gutter);
+}
+
 ul {
     list-style-type: none;
 
