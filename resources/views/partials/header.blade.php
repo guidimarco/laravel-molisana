@@ -10,13 +10,22 @@
             <nav id="main-menu" class="col-xs-12">
                 <ul>
                     <li>
-                        <a href="{{ route('home') }}">Home</a>
+                        <a href="{{ route('home') }}"
+                            class="{{Request::route() -> getName() == 'home' ? 'active' : ''}}">
+                            Home
+                        </a>
                     </li>
                     <li>
-                        <a href="{{ route('prodotti') }}">Prodotti</a>
+                        <a href="{{ route('prodotti') }}"
+                            class="{{Request::route() -> getName() == 'prodotti' ? 'active' : ''}}">
+                            Prodotti
+                        </a>
                     </li>
                     <li>
-                        <a href="{{ route('news') }}">News</a>
+                        <a href="{{ route('news') }}"
+                            class="{{Request::route() -> getName() == 'news' ? 'active' : ''}}">
+                            News
+                        </a>
                     </li>
                 </ul>
             </nav>

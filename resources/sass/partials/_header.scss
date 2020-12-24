@@ -19,6 +19,10 @@ header {
 
         a {
             padding: $spacing;
+            color: $titlePr;
+            &.active, &:hover {
+                background-color: #B3E5FC;
+            }
         }
     }
 

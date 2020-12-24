@@ -520,6 +520,10 @@ header #main-menu {
 }
 header #main-menu a {
   padding: 12px;
+  color: #001942;
+}
+header #main-menu a.active, header #main-menu a:hover {
+  background-color: #B3E5FC;
 }
 
 main {
