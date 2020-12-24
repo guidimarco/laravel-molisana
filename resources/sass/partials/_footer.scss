@@ -1,7 +1,11 @@
 footer {
     font-size: $fontSize * 0.9;
     padding: (2 * $spacing) 0;
+    padding-bottom: 150px; // footer-bg-img height
     color: $textPr;
+    background-image: url("../images/sfondo-footer.jpg");
+    background-repeat: repeat-x;
+    background-position: bottom;
 
     ul {
         li {

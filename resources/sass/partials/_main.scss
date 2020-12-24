@@ -8,9 +8,14 @@ main {
         .card {
             position: relative;
             margin: $gutter;
+            cursor: pointer;
 
-            img {
-                max-width: 100%;
+            .img-container {
+                width: 100%;
+                img {
+                    display: block;
+                    max-width: 100%;
+                }
             }
 
             .card-overlay {

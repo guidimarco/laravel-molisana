@@ -9,7 +9,9 @@
             @foreach ($formati as $formato)
                 <div class="col-xs-12 col-md-4">
                     <div class="card">
-                        <img src="{{ $formato['src'] }}" alt="{{ 'tipo di pasta ' . $formato['titolo'] }}">
+                        <div class="img-container">
+                            <img src="{{ $formato['src'] }}" alt="{{ 'tipo di pasta ' . $formato['titolo'] }}">
+                        </div>
                         <div class="card-overlay">
                             {{ $formato['titolo'] }}
                         </div>
