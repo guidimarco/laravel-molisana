@@ -526,10 +526,15 @@ header #main-menu a.active, header #main-menu a:hover {
   background-color: #B3E5FC;
 }
 
-main {
+main > div {
   min-height: 100vh;
-  background-image: url("/images/sfondo-main.jpg");
   padding: 24px 0;
+}
+main > div#brand-main {
+  background-image: url("/images/sfondo-main.jpg");
+}
+main > div#scheda-prodotto {
+  background-color: red;
 }
 main .card-container .card {
   position: relative;

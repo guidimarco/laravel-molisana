@@ -40,7 +40,14 @@ Route::get('/prodotti', function () {
 }) -> name("prodotti");
 
 Route::get('prodotti/{id}', function($id) {
-    return $id;
+    $all_pasta = config("pasta");
+    $this_pasta = $all_pasta[$id]; // this type of pasta
+
+    $data = [
+        'this_formato' => $this_pasta
+    ];
+
+    return view('scheda-prodotto', $data);
 });
 
 Route::get('/news', function () {
