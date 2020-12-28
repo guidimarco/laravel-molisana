@@ -20,9 +20,9 @@
             </div>
 
             <!-- btm img -->
-            <span class="next-title">
-                {{ $prev_formato['titolo'] }}
-            </span>
+            <div class="next-title">
+                <span>{{ $prev_formato['titolo'] }}</span>
+            </div>
         </a>
 
         <!-- product info container -->
@@ -37,12 +37,25 @@
             </p>
         </div>
 
-        <!-- right: split to next scheda-prodotto -->
+        <!-- right: split to prev scheda-prodotto -->
         <a class="arrow arrow-right"
             href="{{ route("scheda-prodotto", ["id" => $next_id]) }}">
-            <span>
-                &rarr;
-            </span>
+            <div class="top">
+                <!-- left arrow -->
+                <span class="arrow-symb">
+                    &rarr;
+                </span>
+
+                <!-- right img -->
+                <div class="img-container">
+                    <img src="{{ $next_formato['src'] }}" alt="{{ $next_formato['titolo'] }}">
+                </div>
+            </div>
+
+            <!-- btm img -->
+            <div class="next-title">
+                <span>{{ $next_formato['titolo'] }}</span>
+            </div>
         </a>
     </div>
 @endsection

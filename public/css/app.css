@@ -578,24 +578,78 @@ main > div#scheda-prodotto .arrow {
   display: block;
   position: fixed;
   top: 50%;
-  transform: translateY(-calc(130px/2));
+  transform: translate(-130px, calc(-130px / 2));
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
 }
-main > div#scheda-prodotto .arrow:hover .arrow-symb {
-  background-color: #252525;
+main > div#scheda-prodotto .arrow.arrow-left:hover {
+  -webkit-animation: arrow-left-animation 1s ease 0s 1 normal forwards;
+          animation: arrow-left-animation 1s ease 0s 1 normal forwards;
 }
-main > div#scheda-prodotto .arrow:hover .top .img-container {
-  display: block;
+@-webkit-keyframes arrow-left-animation {
+  0% {
+    transform: translate(-130px, calc(-130px / 2));
+  }
+  100% {
+    transform: translate(0, calc(-130px / 2));
+  }
 }
-main > div#scheda-prodotto .arrow:hover .next-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+@keyframes arrow-left-animation {
+  0% {
+    transform: translate(-130px, calc(-130px / 2));
+  }
+  100% {
+    transform: translate(0, calc(-130px / 2));
+  }
 }
 main > div#scheda-prodotto .arrow.arrow-right {
   right: 0;
+  transform: translate(130px, calc(-130px / 2));
+}
+main > div#scheda-prodotto .arrow.arrow-right:hover {
+  -webkit-animation: arrow-right-animation 1s ease 0s 1 normal forwards;
+          animation: arrow-right-animation 1s ease 0s 1 normal forwards;
+}
+@-webkit-keyframes arrow-right-animation {
+  0% {
+    transform: translate(130px, calc(-130px / 2));
+  }
+  100% {
+    transform: translate(0, calc(-130px / 2));
+  }
+}
+@keyframes arrow-right-animation {
+  0% {
+    transform: translate(130px, calc(-130px / 2));
+  }
+  100% {
+    transform: translate(0, calc(-130px / 2));
+  }
+}
+main > div#scheda-prodotto .arrow:hover .top .arrow-symb {
+  -webkit-animation: arrow-symb-animation 1s ease 0s 1 normal forwards;
+          animation: arrow-symb-animation 1s ease 0s 1 normal forwards;
+}
+@-webkit-keyframes arrow-symb-animation {
+  0% {
+    width: calc(130px / 2);
+  }
+  100% {
+    width: 130px;
+    background-color: #252525;
+  }
+}
+@keyframes arrow-symb-animation {
+  0% {
+    width: calc(130px / 2);
+  }
+  100% {
+    width: 130px;
+    background-color: #252525;
+  }
+}
+main > div#scheda-prodotto .arrow:hover .next-title {
+  display: block;
 }
 main > div#scheda-prodotto .arrow .top {
   display: table;
@@ -603,7 +657,6 @@ main > div#scheda-prodotto .arrow .top {
   content: "";
 }
 main > div#scheda-prodotto .arrow .top .img-container {
-  display: none;
   float: left;
 }
 main > div#scheda-prodotto .arrow .top .img-container img {
@@ -630,6 +683,11 @@ main > div#scheda-prodotto .arrow .next-title {
   padding: 12px;
   background-color: rgba(255, 255, 255, 0.85);
   color: #252525;
+  text-align: right;
+  white-space: normal;
+}
+main > div#scheda-prodotto .arrow.arrow-right .next-title {
+  text-align: left;
 }
 
 footer {

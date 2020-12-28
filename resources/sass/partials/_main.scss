@@ -51,28 +51,43 @@ main {
             .arrow {
                 display: block;
                 position: fixed;
-                top: 50%; transform: translateY(-calc(#{$arrow-dim} / 2));
+                top: 50%; transform: translate(-$arrow-dim, calc(-#{$arrow-dim} / 2));
                 background-color: $btnPr; color: $btnPrText;
 
-                &:hover .arrow-symb {
-                    background-color: $btnHover;
+                &.arrow-left:hover {
+                    animation: arrow-left-animation 1s ease 0s 1 normal forwards;
                 }
-                &:hover .top .img-container {
-                    display: block;
-                }
-                &:hover .next-title {
-                    @include flex(row, flex-end, center);
+                @keyframes arrow-left-animation {
+                    0% {transform: translate(-$arrow-dim, calc(-#{$arrow-dim} / 2));}
+                    100% {transform: translate(0, calc(-#{$arrow-dim} / 2));}
                 }
                 &.arrow-right {
                     right: 0;
+                    transform: translate($arrow-dim, calc(-#{$arrow-dim} / 2));
+                }
+                &.arrow-right:hover {
+                    animation: arrow-right-animation 1s ease 0s 1 normal forwards;
+                }
+                @keyframes arrow-right-animation {
+                    0% {transform: translate($arrow-dim, calc(-#{$arrow-dim} / 2));}
+                    100% {transform: translate(0, calc(-#{$arrow-dim} / 2));}
                 }
 
+                &:hover .top .arrow-symb {
+                    animation: arrow-symb-animation 1s ease 0s 1 normal forwards;
+                }
+                @keyframes arrow-symb-animation {
+                    0% {width: calc(#{$arrow-dim} / 2);}
+                    100% {width: $arrow-dim; background-color: $btnHover;}
+                }
+                &:hover .next-title {
+                    display: block;
+                }
 
                 .top {
                     @include clearfix;
                     // external img
                     .img-container {
-                        display: none;
                         float: left;
                         img {
                             display: block;
@@ -93,8 +108,15 @@ main {
                     display: none;
                     padding: $spacing;
                     background-color: $btnSec; color: $btnHover;
+                    text-align: right;
+                    white-space: normal;
                 }
-            }
+                &.arrow-right {
+                    .next-title {
+                        text-align: left;
+                    }
+                }
+            } // end arrow
         } // end scheda prodotto
     }
 } // end main
