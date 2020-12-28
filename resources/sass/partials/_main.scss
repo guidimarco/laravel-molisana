@@ -6,42 +6,66 @@ main {
         &#brand-main {
             background-image: url("/images/sfondo-main.jpg");
 
-        }
+            // html --> Prodotti
+            .card-container {
+                .card {
+                    position: relative;
+                    margin: $gutter;
+                    cursor: pointer;
+
+                    .img-container {
+                        width: 100%;
+                        img {
+                            display: block;
+                            max-width: 100%;
+                        }
+                    }
+
+                    .card-overlay {
+                        opacity: 0;
+                        @include posAbs(0, 0, 0, 0);
+                        @include flex(row, center, center);
+                        transition: opacity 2s;
+                    }
+
+                    &:hover {
+                        .card-overlay {
+                            background-color: #fff;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+
+        } // end brand main
         &#scheda-prodotto {
-            // background-image: url("/images/sfondo-main.jpg");
-            background-color: red;
-        }
-    }
-
-    // html --> Prodotti
-    .card-container {
-        .card {
             position: relative;
-            margin: $gutter;
-            cursor: pointer;
+            // background-image: url("/images/sfondo-main.jpg");
+            background-color: $schedaProdotto;
+            color: $titlePr;
+            h1 {
+                text-align: center;
+            }
 
-            .img-container {
-                width: 100%;
-                img {
+            .arrow {
+                display: block;
+                position: fixed;
+                top: 50%; transform: translateY(-50%);
+                background-color: $btnPr; color: $btnPrText;
+
+                &:hover {
+                    background-color: $btnHover;
+                }
+                &.arrow-right {
+                    right: 0;
+                }
+
+                span {
                     display: block;
-                    max-width: 100%;
+                    width: 60px; height: 120px;
+                    @include flex(row, center, center);
                 }
             }
-
-            .card-overlay {
-                opacity: 0;
-                @include posAbs(0, 0, 0, 0);
-                @include flex(row, center, center);
-                transition: opacity 2s;
-            }
-
-            &:hover {
-                .card-overlay {
-                    background-color: #fff;
-                    opacity: 0.8;
-                }
-            }
-        }
+        } // end scheda prodotto
     }
-
-}
+} // end main

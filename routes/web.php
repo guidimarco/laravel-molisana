@@ -34,7 +34,7 @@ Route::get('/prodotti', function () {
         ], // all type of pasta
     ];
 
-    // dd($data);
+    // dd($data['formati']);
 
     return view('prodotti', $data);
 }) -> name("prodotti");
@@ -48,7 +48,7 @@ Route::get('prodotti/{id}', function($id) {
     ];
 
     return view('scheda-prodotto', $data);
-});
+}) -> name("scheda-prodotto");
 
 Route::get('/news', function () {
     return view('news');

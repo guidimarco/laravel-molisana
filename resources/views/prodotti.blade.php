@@ -19,7 +19,8 @@
                                     <img src="{{ $formato['src'] }}" alt="{{ 'tipo di pasta ' . $formato['titolo'] }}">
                                 </div>
                                 <a class="card-overlay"
-                                    href="{{ url('http://localhost:8000/prodotti/' . $index) }}">
+                                    {{-- href="{{ url('http://localhost:8000/prodotti/' . $index) }}" --}}
+                                    href="{{ route("scheda-prodotto", ["id" => $index]) }}">
                                     {{ $formato['titolo'] }}
                                 </a>
                             </div><!-- end card -->

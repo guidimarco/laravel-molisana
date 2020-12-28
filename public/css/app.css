@@ -491,6 +491,10 @@ h2 {
   margin: 24px 0 12px 10px;
 }
 
+img {
+  max-width: 100%;
+}
+
 ul {
   list-style-type: none;
 }
@@ -533,22 +537,19 @@ main > div {
 main > div#brand-main {
   background-image: url("/images/sfondo-main.jpg");
 }
-main > div#scheda-prodotto {
-  background-color: red;
-}
-main .card-container .card {
+main > div#brand-main .card-container .card {
   position: relative;
   margin: 5px;
   cursor: pointer;
 }
-main .card-container .card .img-container {
+main > div#brand-main .card-container .card .img-container {
   width: 100%;
 }
-main .card-container .card .img-container img {
+main > div#brand-main .card-container .card .img-container img {
   display: block;
   max-width: 100%;
 }
-main .card-container .card .card-overlay {
+main > div#brand-main .card-container .card .card-overlay {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -561,9 +562,40 @@ main .card-container .card .card-overlay {
   align-items: center;
   transition: opacity 2s;
 }
-main .card-container .card:hover .card-overlay {
+main > div#brand-main .card-container .card:hover .card-overlay {
   background-color: #fff;
   opacity: 0.8;
+}
+main > div#scheda-prodotto {
+  position: relative;
+  background-color: #b7dae5;
+  color: #001942;
+}
+main > div#scheda-prodotto h1 {
+  text-align: center;
+}
+main > div#scheda-prodotto .arrow {
+  display: block;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+main > div#scheda-prodotto .arrow:hover {
+  background-color: #252525;
+}
+main > div#scheda-prodotto .arrow.arrow-right {
+  right: 0;
+}
+main > div#scheda-prodotto .arrow span {
+  display: block;
+  width: 60px;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {

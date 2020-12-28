@@ -25,6 +25,10 @@ h2 {
     margin: (2 * $spacing) 0 $spacing (2 * $gutter);
 }
 
+img {
+    max-width: 100%;
+}
+
 ul {
     list-style-type: none;
 
