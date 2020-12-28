@@ -578,24 +578,58 @@ main > div#scheda-prodotto .arrow {
   display: block;
   position: fixed;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-calc(130px/2));
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
 }
-main > div#scheda-prodotto .arrow:hover {
+main > div#scheda-prodotto .arrow:hover .arrow-symb {
   background-color: #252525;
+}
+main > div#scheda-prodotto .arrow:hover .top .img-container {
+  display: block;
+}
+main > div#scheda-prodotto .arrow:hover .next-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 main > div#scheda-prodotto .arrow.arrow-right {
   right: 0;
 }
-main > div#scheda-prodotto .arrow span {
+main > div#scheda-prodotto .arrow .top {
+  display: table;
+  clear: both;
+  content: "";
+}
+main > div#scheda-prodotto .arrow .top .img-container {
+  display: none;
+  float: left;
+}
+main > div#scheda-prodotto .arrow .top .img-container img {
   display: block;
-  width: 60px;
-  height: 120px;
+  max-width: unset;
+  width: 130px;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main > div#scheda-prodotto .arrow .top .arrow-symb {
+  float: left;
+  width: calc(130px / 2);
+  height: 130px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+main > div#scheda-prodotto .arrow .next-title {
+  display: none;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #252525;
 }
 
 footer {

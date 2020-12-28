@@ -1,4 +1,5 @@
 main {
+    $arrow-dim: 130px;
 
     & > div {
         min-height: 100vh;
@@ -50,20 +51,48 @@ main {
             .arrow {
                 display: block;
                 position: fixed;
-                top: 50%; transform: translateY(-50%);
+                top: 50%; transform: translateY(-calc(#{$arrow-dim} / 2));
                 background-color: $btnPr; color: $btnPrText;
 
-                &:hover {
+                &:hover .arrow-symb {
                     background-color: $btnHover;
+                }
+                &:hover .top .img-container {
+                    display: block;
+                }
+                &:hover .next-title {
+                    @include flex(row, flex-end, center);
                 }
                 &.arrow-right {
                     right: 0;
                 }
 
-                span {
-                    display: block;
-                    width: 60px; height: 120px;
-                    @include flex(row, center, center);
+
+                .top {
+                    @include clearfix;
+                    // external img
+                    .img-container {
+                        display: none;
+                        float: left;
+                        img {
+                            display: block;
+                            max-width: unset;
+                            width: $arrow-dim; height: $arrow-dim;
+                            object-fit: cover; object-position: center;
+                        }
+                    }
+                    // int arrow
+                    .arrow-symb {
+                        float: left;
+                        width: calc(#{$arrow-dim} / 2); height: $arrow-dim;
+                        @include flex(row, center, center);
+                    }
+                }
+
+                .next-title {
+                    display: none;
+                    padding: $spacing;
+                    background-color: $btnSec; color: $btnHover;
                 }
             }
         } // end scheda prodotto

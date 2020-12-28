@@ -39,12 +39,41 @@ Route::get('/prodotti', function () {
     return view('prodotti', $data);
 }) -> name("prodotti");
 
-Route::get('prodotti/{id}', function($id) {
+Route::get('scheda-prodotto/{id}', function($id) {
     $all_pasta = config("pasta");
     $this_pasta = $all_pasta[$id]; // this type of pasta
 
+    // calc of prev-next id
+    $numb_pasta = count($all_pasta) - 1; // lenght of array of pasta
+    $prev_id;
+    $next_id;
+
+    if ($id != 0 && $id != $numb_pasta) {
+        $prev_id = $id - 1;
+        $next_id = $id + 1;
+    } elseif ($id == 0) {
+        // this_id is the first-product
+        $prev_id = $numb_pasta;
+        $next_id = $id + 1;
+    } elseif ($id == $numb_pasta) {
+        // this_id is the last-product
+        $prev_id = $id - 1;
+        $next_id = 0;
+    }
+
+    $prev_pasta = $all_pasta[$prev_id]; // prev type of pasta
+    $next_pasta = $all_pasta[$next_id]; // next type of pasta
+
+
+    // dd($numb_pasta . $prev_id . $next_id);
+
     $data = [
-        'this_formato' => $this_pasta
+        'this_id' => $id,
+        'this_formato' => $this_pasta,
+        'prev_id' => $prev_id,
+        'prev_formato' => $prev_pasta,
+        'next_id' => $next_id,
+        'next_formato' => $next_pasta
     ];
 
     return view('scheda-prodotto', $data);

@@ -6,9 +6,22 @@
     <div id="scheda-prodotto">
         <!-- left: split to prev scheda-prodotto -->
         <a class="arrow arrow-left"
-            href="#">
-            <span>
-                &larr;
+            href="{{ route("scheda-prodotto", ["id" => $prev_id]) }}">
+            <div class="top">
+                <!-- left img -->
+                <div class="img-container">
+                    <img src="{{ $prev_formato['src'] }}" alt="{{ $prev_formato['titolo'] }}">
+                </div>
+
+                <!-- right img -->
+                <span class="arrow-symb">
+                    &larr;
+                </span>
+            </div>
+
+            <!-- btm img -->
+            <span class="next-title">
+                {{ $prev_formato['titolo'] }}
             </span>
         </a>
 
@@ -26,7 +39,7 @@
 
         <!-- right: split to next scheda-prodotto -->
         <a class="arrow arrow-right"
-            href="#">
+            href="{{ route("scheda-prodotto", ["id" => $next_id]) }}">
             <span>
                 &rarr;
             </span>
